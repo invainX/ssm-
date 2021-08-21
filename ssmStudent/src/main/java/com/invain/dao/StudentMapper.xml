@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatiis.org/DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.invain.dao.StudentMapper">
+
+    <insert id="addStudent" parameterType="Student">
+        insert into ssmstudent.student(name, sex, birthday)
+        values (#{name},#{sex},#{birthday})
+    </insert>
+
+    <delete id="deleteStudentById" parameterType="int">
+        delete form ssmstudent.student where id = #{id}
+    </delete>
+
+    <update id="updateStudent" parameterType="Student">
+        update ssmstudent.student
+        set name=#{name},set sex=#{sex},birthday=#{birthday}
+        where id=#{id}
+    </update>
+
+    <select id="queryBookById" resultType="Student">
+        select * from ssmstudent.student where id=#{id}
+    </select>
+
+    <select id="queryAllStudent" parameterType="Student">
+        select * from ssmstudent.student;
+    </select>
+</mapper>
