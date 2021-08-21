@@ -24,7 +24,7 @@
         select * from ssmstudent.student where id=#{id}
     </select>
 
-    <select id="queryAllStudent" parameterType="Student">
+    <select id="queryAllStudent" resultType="Student">
         select * from ssmstudent.student;
     </select>
 </mapper>
