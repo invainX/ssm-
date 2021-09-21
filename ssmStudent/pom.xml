@@ -10,6 +10,12 @@
 
     <!--依赖：Junit，数据库驱动，连接池，servlet，jsp，mybatis-spring，spring-->
     <dependencies>
+        <!--junit-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
         <!--数据库驱动-->
         <dependency>
             <groupId>mysql</groupId>
